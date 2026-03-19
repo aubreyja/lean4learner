@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A001 /* LeanLearnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001 /* LeanLearnerApp.swift */; };
+		A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002 /* ContentView.swift */; };
+		A003 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F003 /* Lesson.swift */; };
+		A004 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004 /* Exercise.swift */; };
+		A005 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F005 /* UserProgress.swift */; };
+		A006 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006 /* ProgressViewModel.swift */; };
+		A007 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007 /* LessonViewModel.swift */; };
+		A008 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008 /* HomeView.swift */; };
+		A009 /* LessonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009 /* LessonRowView.swift */; };
+		A010 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010 /* LessonView.swift */; };
+		A011 /* ExerciseDispatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011 /* ExerciseDispatchView.swift */; };
+		A012 /* MultipleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012 /* MultipleChoiceView.swift */; };
+		A013 /* FillInBlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F013 /* FillInBlankView.swift */; };
+		A014 /* TapAllCorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F014 /* TapAllCorrectView.swift */; };
+		A015 /* LessonCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015 /* LessonCompleteView.swift */; };
+		A016 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016 /* SharedComponents.swift */; };
+		A017 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017 /* ProgressView.swift */; };
+		A018 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018 /* OnboardingView.swift */; };
+		A019 /* LessonContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019 /* LessonContent.swift */; };
+		A020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F020 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F001 /* LeanLearnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLearnerApp.swift; sourceTree = "<group>"; };
+		F002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F003 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		F004 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		F005 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
+		F006 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		F007 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
+		F008 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F009 /* LessonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRowView.swift; sourceTree = "<group>"; };
+		F010 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		F011 /* ExerciseDispatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDispatchView.swift; sourceTree = "<group>"; };
+		F012 /* MultipleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceView.swift; sourceTree = "<group>"; };
+		F013 /* FillInBlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillInBlankView.swift; sourceTree = "<group>"; };
+		F014 /* TapAllCorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAllCorrectView.swift; sourceTree = "<group>"; };
+		F015 /* LessonCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompleteView.swift; sourceTree = "<group>"; };
+		F016 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		F017 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		F018 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F019 /* LessonContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContent.swift; sourceTree = "<group>"; };
+		F020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		PROD /* LeanLearner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanLearner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BP02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ROOT /* / */ = {
+			isa = PBXGroup;
+			children = (
+				GRP_APP /* LeanLearner */,
+				GRP_PROD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		GRP_PROD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PROD /* LeanLearner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GRP_APP /* LeanLearner */ = {
+			isa = PBXGroup;
+			children = (
+				GRP_APPDIR /* App */,
+				GRP_MODELS /* Models */,
+				GRP_VMS /* ViewModels */,
+				GRP_VIEWS /* Views */,
+				GRP_DATA /* Data */,
+				GRP_RES /* Resources */,
+			);
+			path = LeanLearner;
+			sourceTree = "<group>";
+		};
+		GRP_APPDIR /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F001 /* LeanLearnerApp.swift */,
+				F002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		GRP_MODELS /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F003 /* Lesson.swift */,
+				F004 /* Exercise.swift */,
+				F005 /* UserProgress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GRP_VMS /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F006 /* ProgressViewModel.swift */,
+				F007 /* LessonViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		GRP_VIEWS /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				GRP_HOME /* Home */,
+				GRP_LESSON /* Lesson */,
+				GRP_PROGRESS /* Progress */,
+				GRP_ONBOARD /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GRP_HOME /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F008 /* HomeView.swift */,
+				F009 /* LessonRowView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		GRP_LESSON /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				F010 /* LessonView.swift */,
+				F011 /* ExerciseDispatchView.swift */,
+				F012 /* MultipleChoiceView.swift */,
+				F013 /* FillInBlankView.swift */,
+				F014 /* TapAllCorrectView.swift */,
+				F015 /* LessonCompleteView.swift */,
+				F016 /* SharedComponents.swift */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		GRP_PROGRESS /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				F017 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		GRP_ONBOARD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F018 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		GRP_DATA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F019 /* LessonContent.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		GRP_RES /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F020 /* Assets.xcassets */,
+				F021 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TGT /* LeanLearner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCL_TGT /* Build configuration list for PBXNativeTarget "LeanLearner" */;
+			buildPhases = (
+				BP01 /* Sources */,
+				BP02 /* Frameworks */,
+				BP03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeanLearner;
+			productName = LeanLearner;
+			productReference = PROD /* LeanLearner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PROJ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					TGT = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = BCL_PROJ /* Build configuration list for PBXProject "LeanLearner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ROOT;
+			productRefGroup = GRP_PROD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TGT /* LeanLearner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BP03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A020 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BP01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001 /* LeanLearnerApp.swift in Sources */,
+				A002 /* ContentView.swift in Sources */,
+				A003 /* Lesson.swift in Sources */,
+				A004 /* Exercise.swift in Sources */,
+				A005 /* UserProgress.swift in Sources */,
+				A006 /* ProgressViewModel.swift in Sources */,
+				A007 /* LessonViewModel.swift in Sources */,
+				A008 /* HomeView.swift in Sources */,
+				A009 /* LessonRowView.swift in Sources */,
+				A010 /* LessonView.swift in Sources */,
+				A011 /* ExerciseDispatchView.swift in Sources */,
+				A012 /* MultipleChoiceView.swift in Sources */,
+				A013 /* FillInBlankView.swift in Sources */,
+				A014 /* TapAllCorrectView.swift in Sources */,
+				A015 /* LessonCompleteView.swift in Sources */,
+				A016 /* SharedComponents.swift in Sources */,
+				A017 /* ProgressView.swift in Sources */,
+				A018 /* OnboardingView.swift in Sources */,
+				A019 /* LessonContent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BC_PROJ_DBG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC_PROJ_REL /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC_TGT_DBG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LeanLearner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lean4learner.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BC_TGT_REL /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LeanLearner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lean4learner.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCL_PROJ /* Build configuration list for PBXProject "LeanLearner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_PROJ_DBG /* Debug */,
+				BC_PROJ_REL /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCL_TGT /* Build configuration list for PBXNativeTarget "LeanLearner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_TGT_DBG /* Debug */,
+				BC_TGT_REL /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PROJ /* Project object */;
+}
