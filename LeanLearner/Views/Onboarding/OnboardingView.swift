@@ -23,7 +23,7 @@ struct OnboardingView: View {
                     OnboardingPageView(
                         icon: pages[i].icon,
                         title: pages[i].title,
-                        body: pages[i].body
+                        description: pages[i].body
                     )
                     .tag(i)
                 }
@@ -56,7 +56,7 @@ struct OnboardingView: View {
 private struct OnboardingPageView: View {
     let icon: String
     let title: String
-    let body: String
+    let description: String
 
     var body: some View {
         VStack(spacing: 24) {
@@ -69,7 +69,7 @@ private struct OnboardingPageView: View {
             Text(title)
                 .font(.largeTitle).bold()
                 .multilineTextAlignment(.center)
-            Text(body)
+            Text(description)
                 .font(.body)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)

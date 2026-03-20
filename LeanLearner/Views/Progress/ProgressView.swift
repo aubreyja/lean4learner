@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ProgressView: View {
+struct UserProgressView: View {
     @EnvironmentObject var progressVM: ProgressViewModel
 
     var body: some View {

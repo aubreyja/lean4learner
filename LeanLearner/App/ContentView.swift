@@ -21,7 +21,7 @@ struct MainTabView: View {
                     Label("Learn", systemImage: "book.fill")
                 }
 
-            ProgressView()
+            UserProgressView()
                 .tabItem {
                     Label("Progress", systemImage: "chart.bar.fill")
                 }
