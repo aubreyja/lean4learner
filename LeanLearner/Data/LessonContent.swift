@@ -6,7 +6,7 @@ enum LessonContent {
     static let course = Course(
         title: "Learn Lean 4",
         tagline: "From zero to proofs, one lesson at a time.",
-        units: [unit1, unit2, unit3, unit4, unit5]
+        units: [unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8]
     )
 }
 
@@ -430,4 +430,298 @@ private let unit5 = Unit(
         ]),
     ]
 )
+// MARK: - Unit 6: Structures
+
+private let unit6 = Unit(
+    title: "Structures",
+    icon: "square.3.layers.3d",
+    color: "teal",
+    lessons: [
+        Lesson(id: "u6l1", title: "Defining Structures", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "Which keyword defines a record type with named fields in Lean 4?",
+                codeSnippet: nil,
+                options: ["record", "struct", "structure", "class"],
+                correctIndex: 2,
+                explanation: "`structure` defines a product type with named fields and auto-generated projection functions."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Fill in the keyword to define a 2D point structure.",
+                codePrefix: "",
+                codeSuffix: " Point where\n  x : Float\n  y : Float",
+                answer: "structure",
+                hint: "The keyword for record types in Lean 4."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "How do you access the `x` field of a `Point` value `p`?",
+                codeSnippet: "structure Point where\n  x : Float\n  y : Float",
+                options: ["p[x]", "p->x", "p.x", "Point.get p x"],
+                correctIndex: 2,
+                explanation: "Lean 4 generates a projection `Point.x : Point → Float`. Dot notation `p.x` is syntactic sugar for `Point.x p`."
+            )),
+        ]),
+
+        Lesson(id: "u6l2", title: "Creating Instances", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "Which syntax creates a `Point` with x = 1.0 and y = 2.0?",
+                codeSnippet: "structure Point where\n  x : Float\n  y : Float",
+                options: [
+                    "Point(1.0, 2.0)",
+                    "{ x := 1.0, y := 2.0 }",
+                    "Point.mk 1.0 2.0",
+                    "Both B and C are valid",
+                ],
+                correctIndex: 3,
+                explanation: "Both anonymous constructor `{ x := 1.0, y := 2.0 }` and the generated `Point.mk 1.0 2.0` are valid. The brace syntax is idiomatic."
+            )),
+            Exercise(kind: .tapAllCorrect(
+                question: "Which are valid ways to create a `Point` with x = 0.0, y = 0.0?",
+                options: [
+                    "{ x := 0.0, y := 0.0 }",
+                    "Point.mk 0.0 0.0",
+                    "⟨0.0, 0.0⟩",
+                    "Point 0.0 0.0",
+                ],
+                correctIndices: [0, 1, 2],
+                explanation: "Anonymous constructors `{ }`, `Point.mk`, and angle brackets `⟨⟩` all work. Bare `Point 0.0 0.0` without `.mk` is not valid syntax."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Fill in the field accessor to get the `y` coordinate.",
+                codePrefix: "def getY (p : Point) : Float := p.",
+                codeSuffix: "",
+                answer: "y",
+                hint: "Dot notation with the field name."
+            )),
+        ]),
+
+        Lesson(id: "u6l3", title: "Updating & Extending", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "How do you create a copy of `p : Point` with only the `x` field changed to `5.0`?",
+                codeSnippet: nil,
+                options: [
+                    "p.x = 5.0",
+                    "{ p with x := 5.0 }",
+                    "Point.setX p 5.0",
+                    "p.update(x: 5.0)",
+                ],
+                correctIndex: 1,
+                explanation: "The `{ p with x := 5.0 }` syntax creates a new record that copies all fields of `p` except `x`, which is overridden. Structures in Lean 4 are immutable."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "What does `extends` do in a structure definition?",
+                codeSnippet: "structure ColorPoint extends Point where\n  color : String",
+                options: [
+                    "Creates a subclass like in OOP",
+                    "Copies all fields of Point into ColorPoint",
+                    "Creates a type alias",
+                    "Imports Point's namespace",
+                ],
+                correctIndex: 1,
+                explanation: "`extends` includes all fields of the parent structure. `ColorPoint` gets `x`, `y`, and `color` fields, plus a coercion to `Point`."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Complete the `with` update syntax to move point `p` to y = 0.0.",
+                codePrefix: "def resetY (p : Point) : Point := { p ",
+                codeSuffix: " y := 0.0 }",
+                answer: "with",
+                hint: "The keyword between the record and field overrides."
+            )),
+        ]),
+    ]
+)
+
+// MARK: - Unit 7: Inductive Types
+
+private let unit7 = Unit(
+    title: "Inductive Types",
+    icon: "arrow.2.squarepath",
+    color: "indigo",
+    lessons: [
+        Lesson(id: "u7l1", title: "inductive Basics", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "What keyword defines a type by listing its constructors?",
+                codeSnippet: nil,
+                options: ["enum", "union", "inductive", "variant"],
+                correctIndex: 2,
+                explanation: "`inductive` defines an algebraic data type by giving a name and one or more constructor rules. Both `Bool` and `Nat` are themselves inductive types."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "How many constructors does this type have?",
+                codeSnippet: "inductive Color\n  | red\n  | green\n  | blue",
+                options: ["1", "2", "3", "4"],
+                correctIndex: 2,
+                explanation: "`Color` has exactly 3 constructors: `red`, `green`, and `blue`. Each is a distinct value."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Fill in the keyword to define a type with two constructors.",
+                codePrefix: "",
+                codeSuffix: " Switch | on | off",
+                answer: "inductive",
+                hint: "The keyword for algebraic data types in Lean 4."
+            )),
+        ]),
+
+        Lesson(id: "u7l2", title: "Option Type", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "What is the type of `Option.some 42`?",
+                codeSnippet: nil,
+                options: ["Nat", "Option", "Option Nat", "Maybe Nat"],
+                correctIndex: 2,
+                explanation: "`Option α` is either `none` (no value) or `some a` (a value of type `α`). So `Option.some 42 : Option Nat`."
+            )),
+            Exercise(kind: .tapAllCorrect(
+                question: "Which are constructors of `Option α`?",
+                options: ["none", "some", "nothing", "just"],
+                correctIndices: [0, 1],
+                explanation: "Lean 4's `Option` has exactly two constructors: `none` and `some`. `nothing` and `just` are Haskell/Scala names."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "What pattern matches only the `some` case and binds its value?",
+                codeSnippet: "match opt with\n  | ??? => …\n  | none => …",
+                options: ["| some n => …", "| Option.some n => …", "| just n => …", "Both A and B"],
+                correctIndex: 3,
+                explanation: "Both `some n` (short form) and `Option.some n` (fully qualified) are valid patterns for the `some` constructor."
+            )),
+        ]),
+
+        Lesson(id: "u7l3", title: "List Basics", xpReward: 10, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "What is `::` in Lean 4?",
+                codeSnippet: "#eval 1 :: 2 :: 3 :: []",
+                options: [
+                    "String concatenation",
+                    "The cons constructor — prepends an element to a list",
+                    "A type annotation operator",
+                    "Namespace access",
+                ],
+                correctIndex: 1,
+                explanation: "`::` is the `List.cons` constructor. `1 :: 2 :: 3 :: []` builds the list `[1, 2, 3]` from right to left."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Fill in the cons operator to prepend 0 to the list.",
+                codePrefix: "def myList : List Nat := 0 ",
+                codeSuffix: " [1, 2, 3]",
+                answer: "::",
+                hint: "The cons operator that prepends an element to a list."
+            )),
+            Exercise(kind: .tapAllCorrect(
+                question: "Which expressions evaluate to the same list `[1, 2]`?",
+                options: [
+                    "1 :: 2 :: []",
+                    "[1, 2]",
+                    "1 :: [2]",
+                    "List.cons 1 (List.cons 2 List.nil)",
+                ],
+                correctIndices: [0, 1, 2, 3],
+                explanation: "All four are equivalent. Bracket notation, cons chains, and `List.cons/List.nil` are all valid representations of the same list."
+            )),
+        ]),
+    ]
+)
+
+// MARK: - Unit 8: More Tactics
+
+private let unit8 = Unit(
+    title: "More Tactics",
+    icon: "hammer.fill",
+    color: "red",
+    lessons: [
+        Lesson(id: "u8l1", title: "induction Tactic", xpReward: 15, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "When should you use the `induction` tactic?",
+                codeSnippet: nil,
+                options: [
+                    "When the goal involves a variable of an inductive type",
+                    "When you want to split a conjunction",
+                    "When you need to simplify arithmetic",
+                    "When the goal is False",
+                ],
+                correctIndex: 0,
+                explanation: "`induction n` on a `Nat` splits into two goals: the base case `n = 0` and the inductive step `n = k+1` (with hypothesis that the property holds for `k`)."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "After `induction n` on `n : Nat`, how many subgoals appear?",
+                codeSnippet: "theorem add_zero : ∀ n : Nat, n + 0 = n := by\n  intro n\n  induction n with\n  | zero => …\n  | succ k ih => …",
+                options: ["1", "2", "3", "It depends"],
+                correctIndex: 1,
+                explanation: "`Nat` has two constructors (`zero` and `succ`), so `induction` produces exactly 2 subgoals: one for each constructor."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Complete the tactic to perform induction on `n`.",
+                codePrefix: "theorem zero_add (n : Nat) : 0 + n = n := by\n  ",
+                codeSuffix: " n",
+                answer: "induction",
+                hint: "The tactic that splits a goal by the constructors of an inductive type."
+            )),
+        ]),
+
+        Lesson(id: "u8l2", title: "omega", xpReward: 15, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "What class of goals does the `omega` tactic decide?",
+                codeSnippet: nil,
+                options: [
+                    "All arithmetic goals",
+                    "Linear arithmetic over Int and Nat",
+                    "Polynomial equalities",
+                    "Propositional logic",
+                ],
+                correctIndex: 1,
+                explanation: "`omega` is a decision procedure for linear integer/natural number arithmetic. It handles `+`, `-`, comparisons, and divisibility, but not multiplication of variables."
+            )),
+            Exercise(kind: .tapAllCorrect(
+                question: "Which goals can `omega` close directly?",
+                options: [
+                    "2 + 2 = 4",
+                    "n + 1 > n",
+                    "n * n ≥ 0",
+                    "¬ (n < n)",
+                ],
+                correctIndices: [0, 1, 3],
+                explanation: "`n * n ≥ 0` involves non-linear multiplication, which `omega` can't handle. The others are linear arithmetic facts."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Use `omega` to close this linear arithmetic goal.",
+                codePrefix: "theorem lt_succ (n : Nat) : n < n + 1 := by\n  ",
+                codeSuffix: "",
+                answer: "omega",
+                hint: "The tactic for linear arithmetic over natural numbers and integers."
+            )),
+        ]),
+
+        Lesson(id: "u8l3", title: "cases and rcases", xpReward: 15, exercises: [
+            Exercise(kind: .multipleChoice(
+                question: "What does `cases h` do when `h : P ∨ Q`?",
+                codeSnippet: nil,
+                options: [
+                    "Proves P and Q separately",
+                    "Splits the goal into two: one assuming P, one assuming Q",
+                    "Introduces both P and Q into context",
+                    "Eliminates h from the context",
+                ],
+                correctIndex: 1,
+                explanation: "`cases h` on a disjunction `P ∨ Q` splits the proof into two branches: one where you have `h : P` and one where you have `h : Q`."
+            )),
+            Exercise(kind: .multipleChoice(
+                question: "What is `rcases` compared to `cases`?",
+                codeSnippet: "-- h : A ∧ B\nrcases h with ⟨ha, hb⟩",
+                options: [
+                    "A weaker version of cases",
+                    "A recursive/deep version that can destructure nested patterns in one step",
+                    "Only works on natural numbers",
+                    "An alias for `obtain`",
+                ],
+                correctIndex: 1,
+                explanation: "`rcases` (from Mathlib) extends `cases` with richer pattern syntax `⟨_, _⟩` for nested destructuring. `rcases h with ⟨ha, hb⟩` unpacks a conjunction in one step."
+            )),
+            Exercise(kind: .fillInBlank(
+                instruction: "Complete the tactic to split `h : A ∨ B` into two goals.",
+                codePrefix: "theorem or_comm (h : A ∨ B) : B ∨ A := by\n  ",
+                codeSuffix: " h",
+                answer: "cases",
+                hint: "The tactic that destructs an inductive hypothesis into its constructors."
+            )),
+        ]),
+    ]
+)
+
 // swiftlint:enable line_length

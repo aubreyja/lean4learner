@@ -33,6 +33,9 @@ struct UnitSectionView: View {
         case "orange":  return .orange
         case "purple":  return .purple
         case "pink":    return .pink
+        case "teal":    return .teal
+        case "indigo":  return .indigo
+        case "red":     return .red
         default:        return .purple
         }
     }
